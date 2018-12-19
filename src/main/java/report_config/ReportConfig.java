@@ -12,11 +12,9 @@ public class ReportConfig {
     public List<FieldSelector> reportFieldSelector = new ArrayList<FieldSelector>();
 
     public boolean isFieldToShow(String fieldCanonicalName){
-//        for (FieldSelector fs: reportFieldSelector) {
-//            if(fs.fieldIdentifier.equalsIgnoreCase(fieldCanonicalName) && fs.isPlotOnReport){
-//                return true;
-//            }
-//        }
+        /*return reportFieldSelector.stream().anyMatch(
+                d -> ( d.fieldIdentifier.equalsIgnoreCase(fieldCanonicalName) && d.isPlotOnReport )
+        );*/
         return true;
     }
 

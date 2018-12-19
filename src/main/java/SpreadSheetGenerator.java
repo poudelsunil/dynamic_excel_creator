@@ -32,12 +32,12 @@ public class SpreadSheetGenerator {
 //            l2.add("AAA");
 //            l2.add("BBB");
 //            l2.add("CCC");
-            ((ListOrderedSet<SampleSubClassDto.Test>) l2).add(new SampleSubClassDto.Test(555, "NestedListObj1"));
-            ((ListOrderedSet<SampleSubClassDto.Test>) l2).add(new SampleSubClassDto.Test(666,"NestedListObj1"));
-            ((ListOrderedSet<SampleSubClassDto.Test>) l2).add(new SampleSubClassDto.Test(777,"NestedListObj1"));
+            l2.add(new SampleSubClassDto.Test(555, "NestedListObj1"));
+            l2.add(new SampleSubClassDto.Test(666,"NestedListObj1"));
+            l2.add(new SampleSubClassDto.Test(777,"NestedListObj1"));
             List<SampleDto> dtos = Arrays.asList(
                     new SampleDto("Name1", 1, Arrays.asList("AA", "BB", "CC"), new SampleSubClassDto(11, "Sub AA", l2, new Samaple2Sub(999, "ZZZ")))
-//                    ,new SampleDto("Name2", 2, Arrays.asList("XX", "YY", "ZZ"), new SampleSubClassDto(22, "Sub BB", l2, new Samaple2Sub(999, "ZZZ")))
+                    ,new SampleDto("Name2", 2, Arrays.asList("XX", "YY", "ZZ"), new SampleSubClassDto(22, "Sub BB", l2, new Samaple2Sub(999, "ZZZ")))
             );
 
             generateSpreadSheet("Test.xlsx", dtos, reportConfig);
