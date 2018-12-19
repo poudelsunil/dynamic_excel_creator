@@ -40,7 +40,7 @@ public class SpreadSheetGenerator {
                     ,new SampleDto("Name2", 2, Arrays.asList("XX", "YY", "ZZ"), new SampleSubClassDto(22, "Sub BB", l2, new Samaple2Sub(999, "ZZZ")))
             );
 
-            generateSpreadSheet("Test.xlsx", dtos, reportConfig);
+            generateSpreadSheet("./generated/Test.xlsx", dtos, reportConfig);
         } catch (Exception e) {
             e.printStackTrace();
         }
